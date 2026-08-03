@@ -1,15 +1,15 @@
 class Solution {
 public:
-bool isPalindrome(int x)
-    {
-        string a = to_string(x);
-        int pos = a.size()-1;
-        for(int i =0;i<a.size();i++)
-        {
-            if (a[i]!=a[pos])
-            {
-                return false;
-            }
-            pos--;
+    bool isPalindrome(int x) {
+        long long rev = 0;
+        int original = x;
+        while (x > 0) {
+            rev = rev * 10 + x % 10;
+            x = x / 10;
         }
-        return true;}};
+        if (rev != original) {
+            return false;
+        }
+        return true;
+    }
+};
