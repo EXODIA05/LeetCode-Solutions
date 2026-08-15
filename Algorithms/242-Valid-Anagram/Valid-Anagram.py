@@ -1,11 +1,17 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        new_dict = {}
-        new_dict2 = {}
+        valid = {}
+        anagram = {}
         for i in s:
-            new_dict[i] = new_dict.get(i,0)+1
-        for j in t :
-            new_dict2[j] = new_dict2.get(j,0)+1
-        if new_dict != new_dict2:
+            valid[i] = valid.get(i,0)+1
+        for j in t:
+            anagram[j]=anagram.get(j,0)+1
+        if valid == anagram:
+            return True
+        else:
             return False
-        return True
+                
+            
+            
+
+        
