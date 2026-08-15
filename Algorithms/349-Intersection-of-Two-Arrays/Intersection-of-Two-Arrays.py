@@ -1,10 +1,5 @@
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        hash_map1={}
-        a=[]
-        for i in nums1:
-            hash_map1[i]=hash_map1.get(0,i)+1
-        for key in hash_map1:
-            if key in set(nums2):
-                a.append(key)
-        return a
+        nums1=set(nums1)
+        nums2=set(nums2)
+        return [nums for nums in nums1 if nums in nums2]
