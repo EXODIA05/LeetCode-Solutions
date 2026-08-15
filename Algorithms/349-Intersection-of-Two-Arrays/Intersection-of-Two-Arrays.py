@@ -5,6 +5,6 @@ class Solution:
         for i in nums1:
             hash_map1[i]=hash_map1.get(0,i)+1
         for key in hash_map1:
-            if key in nums2:
+            if key in set(nums2):
                 a.append(key)
         return a
